@@ -1,5 +1,5 @@
 -- Configure this as a double-wide frame to stop the UIParent trampling on it
-UIPanelWindows["QuestLogFrame"] = { area = "override", pushable = 0, xoffset = -16, yoffset = 12, bottomClampOverride = 140+12, width = 724, height = 424, whileDead = 1 };
+UIPanelWindows["QuestLogFrame"] = { area = "override", pushable = 0, xoffset = -16, yoffset = 12, bottomClampOverride = 140+12, width = 724, height = 513, whileDead = 1 };
 
 -- Widen the window, note that this size includes some pad on the right hand
 -- side after the scrollbars

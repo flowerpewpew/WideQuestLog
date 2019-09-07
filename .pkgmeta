@@ -1,5 +1,0 @@
-package-as: widequestlog
-
-ignore:
-    - LICENSE
-    - README.md

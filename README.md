@@ -12,4 +12,6 @@ It fixes the faulty window behavior where the Quest Log frame would not be
 considered doublewide and have other windows like the Character frame overlap 
 the right side of the window. Now it cascades the windows properly.
 
+Also features seamless integration with ElvUI.
+
 ![Wide Quest Log](https://i.imgur.com/IXMDff8.png "Wide Quest Log")

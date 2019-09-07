@@ -66,8 +66,13 @@ local oldQuestsDisplayed = QUESTS_DISPLAYED;
 QUESTS_DISPLAYED = QUESTS_DISPLAYED + 17;
 
 -- Show 3 more quests when ElvUI is present
-if (elvEnabled) then
-	QUESTS_DISPLAYED = QUESTS_DISPLAYED + 3;
+if (elvEnabled) then	
+	local E, L, V, P, G = unpack(ElvUI)
+	local S = E:GetModule('Skins')
+		
+	if E.private.skins.blizzard.enable == true and E.private.skins.blizzard.quest == true then
+		QUESTS_DISPLAYED = QUESTS_DISPLAYED + 3;
+	end
 end
 
 for i = oldQuestsDisplayed + 1, QUESTS_DISPLAYED do

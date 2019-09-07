@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## v1.3 Fix small quest list length bug
+
+- Fixes a quest list length problem. When ElvUI was enabled but quest frame skinning disabled, the quest list would still be the skinned length.
+
 ## v1.2 ElvUI skin integration
 
 - Added ElvUI skinning integration. The addon should now seamlessly fit into ElvUI as well as the default UI.

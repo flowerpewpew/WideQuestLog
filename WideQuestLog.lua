@@ -1,10 +1,51 @@
 -- Configure this as a double-wide frame to stop the UIParent trampling on it
 UIPanelWindows["QuestLogFrame"] = { area = "override", pushable = 0, xoffset = -16, yoffset = 12, bottomClampOverride = 140+12, width = 724, height = 513, whileDead = 1 };
 
+local elvEnabled = IsAddOnLoaded("ElvUI")
+
+local function ElvSkinFrames()
+	if (not elvEnabled) then return end
+	
+	local E, L, V, P, G = unpack(ElvUI)
+	local S = E:GetModule('Skins')
+		
+	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.quest ~= true then return end
+	
+	local function LoadSkin()			
+		QuestLogFrame:Width(724)
+		
+		for i = 1, QUESTS_DISPLAYED do
+			local questLogTitle = _G['QuestLogTitle'..i]
+			questLogTitle:Width(320)
+		end
+		
+		QuestLogFrame:HookScript('OnShow', function()
+			QuestLogListScrollFrame:SetHeight(396);
+		
+			QuestLogDetailScrollFrame:SetHeight(396);
+			QuestLogDetailScrollFrameScrollBar:Point('TOPLEFT', QuestLogDetailScrollFrame, 'TOPRIGHT', 5, -16);
+			
+			QuestLogFrameAbandonButton:SetPoint('BOTTOMLEFT', 18, 14);
+
+			QuestFramePushQuestButton:ClearAllPoints();
+			QuestFramePushQuestButton:SetPoint('RIGHT', QuestFrameExitButton, 'LEFT', -2);
+						
+			QuestLogNoQuestsText:ClearAllPoints();
+			QuestLogNoQuestsText:SetPoint("CENTER", QuestLogFrame);
+		end)
+	end
+	
+	S:AddCallback('Quest', LoadSkin)
+end
+
 -- Widen the window, note that this size includes some pad on the right hand
 -- side after the scrollbars
 QuestLogFrame:SetWidth(724);
 QuestLogFrame:SetHeight(513);
+
+-- Adjust quest log title text
+QuestLogTitleText:ClearAllPoints();
+QuestLogTitleText:SetPoint("TOP", QuestLogFrame, "TOP", 0, -18);
 
 -- Relocate the detail frame over to the right, and stretch it to full
 -- height.
@@ -23,6 +64,11 @@ QuestLogListScrollFrame:SetHeight(362);
 -- Create the additional rows
 local oldQuestsDisplayed = QUESTS_DISPLAYED;
 QUESTS_DISPLAYED = QUESTS_DISPLAYED + 17;
+
+-- Show 3 more quests when ElvUI is present
+if (elvEnabled) then
+	QUESTS_DISPLAYED = QUESTS_DISPLAYED + 3;
+end
 
 for i = oldQuestsDisplayed + 1, QUESTS_DISPLAYED do
     local button = CreateFrame("Button", "QuestLogTitle" .. i, QuestLogFrame, "QuestLogTitleButtonTemplate");
@@ -133,3 +179,5 @@ for _, t in ipairs(txset) do
         end
     end
 end
+
+ElvSkinFrames()

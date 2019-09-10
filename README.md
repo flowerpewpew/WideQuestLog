@@ -1,16 +1,21 @@
 Wide Quest Log
 ==============
 
-Wide Quest Log is a World of Warcraft Classic addon that doubles the width of the 
-Quest Log UI panel to give you a better overview of your quests when your log is 
-full.
+Wide Quest Log is a World of Warcraft Classic addon that doubles the width of the Quest Log UI panel to give you a better overview of your quests when your log is full. This addon sets itself apart for being as simple as possible. It does not offer any more or any less features than the default Quest Log UI apart from making better use of modern screen real estate. For the people that want a little bit more quality of life in their World of Warcraft Classic user interface but stay as close to vanilla as possible.
 
-This addon is fork and re-release of the discontinued addon "DoubleWide" 
-(https://www.wowinterface.com/downloads/info6887-DoubleWide.html)
+Features:
 
-It fixes the faulty window behavior where the Quest Log frame would not be 
-considered doublewide and have other windows like the Character frame overlap 
-the right side of the window. Now it cascades the windows properly.
+* A double window quest log for an extra clear overview of your full quest log.
+* Correctly functioning window tiling. When you open a window beside the quest log it will align the new window correctly.
+* Working shift+click linking of your quests in chat
+* Working shift+click quest tracking
+* Seamless ElvUI integration
+* Simplicity without diluting the vanilla experience.
+* Quest level badges can be added using my standalone addon [Wide Quest Log Levels](https://www.curseforge.com/wow/addons/widequestloglevels "Wide Quest Log Levels")!
+
+This addon is a fork and re-release of the discontinued addon "DoubleWide" (https://www.wowinterface.com/downloads/info6887-DoubleWide.html)
+
+It fixes the faulty window behavior where the quest log frame would not be considered doublewide and have other windows like the character frame overlap the right side of the window. Now it cascades the windows properly.
 
 Also features seamless integration with ElvUI.
 

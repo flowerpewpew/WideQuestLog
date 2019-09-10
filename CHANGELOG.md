@@ -1,6 +1,11 @@
 Changelog
 =========
 
+## v1.4 Texture fix on window footer
+
+- Fixes the texture on the window footer. Instead of a black bar the footer is now textured similar to other windows.
+
+
 ## v1.3 Fix small quest list length bug
 
 - Fixes a quest list length problem. When ElvUI was enabled but quest frame skinning disabled, the quest list would still be the skinned length.

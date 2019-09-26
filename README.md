@@ -12,11 +12,8 @@ Features:
 * Seamless ElvUI integration
 * Simplicity without diluting the vanilla experience.
 * Quest level badges can be added using my standalone addon [Wide Quest Log Levels](https://www.curseforge.com/wow/addons/widequestloglevels "Wide Quest Log Levels")!
+* Compatible with [Quest XP Tracker](https://www.curseforge.com/wow/addons/quest-xp-tracker "Quest XP Tracker")
 
 This addon is a fork and re-release of the discontinued addon "DoubleWide" (https://www.wowinterface.com/downloads/info6887-DoubleWide.html)
-
-It fixes the faulty window behavior where the quest log frame would not be considered doublewide and have other windows like the character frame overlap the right side of the window. Now it cascades the windows properly.
-
-Also features seamless integration with ElvUI.
 
 ![Wide Quest Log](https://i.imgur.com/IXMDff8.png "Wide Quest Log")

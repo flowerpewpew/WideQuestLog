@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## v1.5 Fixed skinning regression with ElvUI 1.11
+
+- Fixes regression with ElvUI quest log changes.
+
 ## v1.4 Texture fix on window footer
 
 - Fixes the texture on the window footer. Instead of a black bar the footer is now textured similar to other windows.

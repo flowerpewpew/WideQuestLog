@@ -1,6 +1,11 @@
 Changelog
 =========
 
+## v1.6 Update supported game version
+
+- Increase supported games version.
+- Fix author name.
+
 ## v1.5 Fixed skinning regression with ElvUI 1.11
 
 - Fixes regression with ElvUI quest log changes.
@@ -8,7 +13,6 @@ Changelog
 ## v1.4 Texture fix on window footer
 
 - Fixes the texture on the window footer. Instead of a black bar the footer is now textured similar to other windows.
-
 
 ## v1.3 Fix small quest list length bug
 
@@ -19,7 +23,7 @@ Changelog
 - Added ElvUI skinning integration. The addon should now seamlessly fit into ElvUI as well as the default UI.
 - Cleaned up a redundant file
 
-## v1.1 Name corection (unreleased)
+## v1.1 Name correction (unreleased)
 
 - A small name correction in the TOC file so the addon name is displayed grammatically correct in the addon overview ingame.
 

@@ -15,12 +15,11 @@ function GetElvUI()
 end
 
 local function ElvSkinFrames()
-	local _, elvSkinningEnabled = GetElvUI()
+	local _, elvSkinningEnabled, E = GetElvUI()
 
-	local E = unpack(ElvUI)
+    if elvSkinningEnabled == false then return end
+
 	local S = E:GetModule('Skins')
-
-	if elvSkinningEnabled == false then return end
 
 	local function LoadSkin()
 		for i = 1, QUESTS_DISPLAYED do
